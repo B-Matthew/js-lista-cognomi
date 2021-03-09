@@ -8,15 +8,21 @@
     <script>
 
     var array = ["Pollon" , "Conad" , "Heidi", "Doraemon", "Keroro", "Paperino", "Minnie", "Ellie", "Abby"];
-    array.push(prompt("inserire il tuo cognome"));
+    var name = prompt("inserire il tuo cognome");
+    array.push(name);
+    array.sort();
 
     console.log(array);
-    console.log(array.sort());
 
     for (var j = 0; j < array.length; j++) {
 
-      console.log(array[j], "sta alla posizione numero: ", j+1);
+      var elem = array[j];
+      if (elem == name) {
+
+        console.log("Posizione umana di " + name +": " + (j+1));
+      }
     }
+
 
     </script>
   </body>
